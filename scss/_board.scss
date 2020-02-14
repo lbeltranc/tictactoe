@@ -1,0 +1,20 @@
+.board {
+
+    padding: 20px;
+
+    td {
+        width: 100px;
+        height: 100px;
+    }
+    table {
+        margin: 5px auto;
+    }
+    .vert {
+        border-left: 8px solid #ffffff;
+        border-right: 8px solid #ffffff;
+    }
+    .hori {
+        border-top: 8px solid #ffffff;
+        border-bottom: 8px solid #ffffff;
+    }
+}
