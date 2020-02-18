@@ -1,0 +1,12 @@
+.game {
+    height: 100vh;
+    background-image: url('../images/space-bg.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+    transition: $page-transition;
+
+    .show-game-screen & {
+        transform: translateY(-100%);
+    }
+}

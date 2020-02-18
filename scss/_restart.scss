@@ -1,0 +1,15 @@
+.restart {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-decoration: none; 
+    font-size: 2em;
+    padding: 10px 30px;
+    background-color: $btn-play-again;
+    border-radius: 15px;
+    border: 2px solid $btn-border;
+    color: $btn-text;
+    
+}

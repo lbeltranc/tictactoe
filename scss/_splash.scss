@@ -1,0 +1,30 @@
+.splash {
+    display: flex;
+    height: 100vh;
+    background-image: url('../images/space-bg.jpg');
+    background-position: top center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: $page-transition;
+
+    h1 {
+        font-size: 4em;
+        font-weight: 800;
+    }
+
+    .btn-start-game {
+        text-decoration: none; 
+        font-size: 2em;
+        padding: 10px 30px;
+        background-color: $btn-start;
+        border-radius: 15px;
+        border: 2px solid $btn-border;
+        color: $btn-text
+    }
+
+    .show-game-screen & {
+        transform: translateY(-100%);
+    }
+}

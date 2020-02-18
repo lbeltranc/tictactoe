@@ -5,21 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe in Space</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Electrolize|Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/index-styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700,800|Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
 
 </head>
 <body>
-    <div class="wrapper">
+    <div class="splash">
         <div class="start-cont">
             <h1>Welcome to Tic Tac Toe in Space</h1>
-            <button type="button" class="btn btn-outline-danger">START</button>
+            <a href="#game" class="btn btn-start-game"
+            id="btn-start-game">START</a>
         </div>
+        
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <div class="game" id="game">
+        <header>
+            <h1>Tic Tac Toe in Space</h1>
+            <a href="" class="play-again"
+            id="play-again">PLAY AGAIN</a>  
+        </header>
+
+        <div class="content">
+            <div class="players">
+                <h2>Players</h2>
+                <p>Player 1: <span class="p1"><img src="images/alien-x.png" alt="angry alien"></span></p>
+                <p>Player 2: <span class="p2"><img src="images/alien-o.png" alt="happy alien"></span></p>
+            </div>
+            <div class="board">
+                <table>
+                    <tr>
+                        <td class="b0-0"></td>
+                        <td class="b0-1 vert"></td>
+                        
+                        <td class="b0-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="b1-0 hori"></td>
+                        <td class="b1-1 vert hori"></td>
+                        <td class="b1-2 hori"></td>
+                    </tr>
+                    <tr>
+                      <td class="b2-0"></td>
+                      <td class="b2-1 vert"></td>
+                      <td class="b2-2"></td>
+                    </tr>
+                  </table>
+            </div>
+        </div>
+        <a href="" class="restart"
+        id="play-again">RESTART</a>
+
+        <div class="results">
+            <h2>Results</h2>
+            <div class="winner"><p>The winner is:</p> </div>
+            <div class="draw"><p>Draw game</p></div>
+        </div>
+        
+    </div>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="scripts/game.js"></script>
 </body>
 </html>
