@@ -13,6 +13,7 @@
     td {
         width: 150px;
         height: 150px;
+        position: relative;
     }
     table {
         margin: 5px;
@@ -24,6 +25,15 @@
     .hori {
         border-top: 8px solid $board-lines;
         border-bottom: 8px solid $board-lines;
+    }
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
     }
     
     

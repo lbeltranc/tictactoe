@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <div class="splash">
+    <div class="splash" id="splash">
         <div class="start-cont">
             <h1>Welcome to Tic Tac Toe in Space</h1>
             <a href="#game" class="btn btn-start-game"
@@ -27,6 +27,9 @@
         </header>
 
         <div class="content">
+            <div class="turns-cont">
+                <p class="turns">Player 1 turn</p>
+            </div>
             <div class="players">
                 <h2>Players</h2>
                 <p>Player 1: <span class="p1"><img src="images/alien-x.png" alt="angry alien"></span></p>
@@ -35,31 +38,31 @@
             <div class="board">
                 <table>
                     <tr>
-                        <td class="b0-0"></td>
-                        <td class="b0-1 vert"></td>
-                        
-                        <td class="b0-2"></td>
+                        <td class="box b00"></td>
+                        <td class="box b01 vert"></td>
+                        <td class="box b02"></td>
                     </tr>
                     <tr>
-                        <td class="b1-0 hori"></td>
-                        <td class="b1-1 vert hori"></td>
-                        <td class="b1-2 hori"></td>
+                        <td class="box b10 hori"></td>
+                        <td class="box b11 vert hori"></td>
+                        <td class="box b12 hori"></td>
                     </tr>
                     <tr>
-                      <td class="b2-0"></td>
-                      <td class="b2-1 vert"></td>
-                      <td class="b2-2"></td>
+                      <td class="box b20"></td>
+                      <td class="box b21 vert"></td>
+                      <td class="box b22"></td>
                     </tr>
                   </table>
             </div>
         </div>
-        <a href="" class="restart"
-        id="play-again">RESTART</a>
+        <div class="reset" id="reset">Reset board</div>
 
-        <div class="results">
-            <h2>Results</h2>
-            <div class="winner"><p>The winner is:</p> </div>
-            <div class="draw"><p>Draw game</p></div>
+        <div class="result">
+            <!-- <h2>Results</h2> -->
+            <div class="result-cont">
+                <p class="winner"></p>
+            </div>
+            <!-- <div class="draw"><p>Draw game</p></div> -->
         </div>
         
     </div>
