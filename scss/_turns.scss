@@ -1,6 +1,12 @@
 .turns {
     position: absolute;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2em;
+    font-size: 1.5em;
+    font-weight: bolder;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid $btn-border;
 }

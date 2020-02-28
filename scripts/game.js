@@ -29,6 +29,13 @@ $('.box').click(function(){
             displayPlayer (turn, player)
         }
     }
+
+    $('#play-again').click(function(e){
+        e.preventDefault();
+        $('.box > img').remove();
+        player = 1;
+        return
+    })
 });
 
 
@@ -96,12 +103,11 @@ function checkDraw (){
     }
 }
 
-$('#reset').click(function(board){
-    board.find('box').each(function (){
-        $(this).removeClass('token1').removeClass('token2');
-    });
-
-})
+// $('#play-again').click(function(e){
+//     e.preventDefault();
+//     $('.box > img').remove();
+//     player = 1;
+// })
 
 $('#btn-start-game').click(function(e){
     e.preventDefault();
