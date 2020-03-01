@@ -16,4 +16,9 @@ header {
     border: 2px solid $btn-border;
     color: $btn-text;
     margin-top: 35px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    // transform: translateY(-50%);
 }

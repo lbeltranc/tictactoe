@@ -8,35 +8,53 @@ let endGame = false;
 $('.box').click(function(){
     box = $(this);
 
+    
     // Checks if the box is empty
     if ((!(box.hasClass('token1') || box.hasClass('token2'))) && (!endGame)){
+        
 
         assignToken (player,box);
         
         turn.html('Player '+player+' turn')
 
+        console.log('.box')
+
+        
+        // Display winner and stops game if there is a winner
         if (checkWinner (board, token)){
-            winner.html('Player '+player+ ' has won :)')
+            winner.html('Player '+player+ ' has won &#128077, do you want to play again?')
             endGame = true;
+            $('#play-again').show()
             return endGame
 
         } else if (checkDraw ()){
-            winner.html('Draw!')
+            winner.html('Draw!, do you want to play again?')
+            $('#play-again').show()
             return 
         } 
         else {
             player = nextPlayer (player);
             displayPlayer (turn, player)
         }
+
+        // Restarts game
+        $('#play-again').click(function(e){
+            e.preventDefault();
+            $('.box > img').remove();
+            $('.box').removeClass('token1 token2');
+
+            player = 1;
+            turn.html('Player '+player+' turn');
+            winner.html('');
+            endGame = false;
+            $('#play-again').hide()
+        })
     }
 
-    $('#play-again').click(function(e){
-        e.preventDefault();
-        $('.box > img').remove();
-        player = 1;
-        return
-    })
+    
 });
+
+
 
 
 // Sets next player
@@ -103,13 +121,9 @@ function checkDraw (){
     }
 }
 
-// $('#play-again').click(function(e){
-//     e.preventDefault();
-//     $('.box > img').remove();
-//     player = 1;
-// })
 
 $('#btn-start-game').click(function(e){
     e.preventDefault();
     $('body').addClass('show-game-screen');
+    $('#play-again').hide()
 });
