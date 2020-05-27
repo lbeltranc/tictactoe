@@ -1,2 +1,0 @@
-# tictactoe
-JavaScript game project
